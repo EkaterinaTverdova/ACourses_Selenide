@@ -2,4 +2,4 @@ target/
 /.idea
 build/
 *.iml
-*xml
+*.xml
