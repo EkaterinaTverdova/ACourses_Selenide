@@ -15,7 +15,6 @@ public class BaseTest {
     public static final String USER = PropertyReader.getProperty("course.user");
     public static final String PASSWORD = PropertyReader.getProperty("course.password");
 
-
     LoginPage loginPage;
     CatalogPage catalogPage;
 
@@ -30,7 +29,7 @@ public class BaseTest {
         Configuration.timeout = 10000;
         Configuration.headless = false;
         Configuration.baseUrl = BASE_URL;
-        //Configuration.holdBrowserOpen = true;
+//        Configuration.holdBrowserOpen = true;
 
         loginPage = new LoginPage();
         catalogPage = new CatalogPage();
