@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
 
 import java.time.Duration;
 
@@ -18,6 +19,6 @@ public class CatalogPage {
     }
 
     public void checkTextColor() {
-        pageTitle.shouldHave(Condition.cssValue("text-decoration-color","rgb(75, 164, 208)"));
+        pageTitle.shouldHave(Condition.cssValue("text-decoration-color", "rgb(75, 164, 208)"));
     }
 }
