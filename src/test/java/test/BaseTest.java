@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.CatalogPage;
+import pages.ConstructorPage;
 import pages.LoginPage;
 import utils.PropertyReader;
 
@@ -17,6 +18,7 @@ public class BaseTest {
 
     LoginPage loginPage;
     CatalogPage catalogPage;
+    ConstructorPage constructorPage;
 
     @BeforeMethod
     public void setup() {
@@ -33,6 +35,7 @@ public class BaseTest {
 
         loginPage = new LoginPage();
         catalogPage = new CatalogPage();
+        constructorPage = new ConstructorPage();
     }
 
     @AfterMethod
