@@ -16,6 +16,10 @@ public class BaseTest {
     public static final String USER = PropertyReader.getProperty("course.user");
     public static final String PASSWORD = PropertyReader.getProperty("course.password");
 
+    String user = USER;
+    String password = PASSWORD;
+
+
     LoginPage loginPage;
     CatalogPage catalogPage;
     ConstructorPage constructorPage;
@@ -36,6 +40,10 @@ public class BaseTest {
         loginPage = new LoginPage();
         catalogPage = new CatalogPage();
         constructorPage = new ConstructorPage();
+
+        loginPage
+                .openPage()
+                .login(user, password);
     }
 
     @AfterMethod
