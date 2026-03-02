@@ -9,13 +9,17 @@ public class LoginPage {
     final SelenideElement passwordImput = $("[id='loginPasswordInput']");
     final SelenideElement loginBtn = $x("//*[text()='Войти']");
 
-    public void openPage() {
+    public LoginPage openPage() {
         open("login");
+
+        return this;
     }
 
-    public void login(String user, String password) {
+    public LoginPage login(String user, String password) {
         userImput.setValue(user);
         passwordImput.setValue(password);
         loginBtn.submit();
+
+        return this;
     }
 }

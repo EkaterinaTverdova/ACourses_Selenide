@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.CatalogPage;
+import pages.ConstructorPage;
 import pages.LoginPage;
 import utils.PropertyReader;
 
@@ -15,8 +16,12 @@ public class BaseTest {
     public static final String USER = PropertyReader.getProperty("course.user");
     public static final String PASSWORD = PropertyReader.getProperty("course.password");
 
+    String user = USER;
+    String password = PASSWORD;
+
     LoginPage loginPage;
     CatalogPage catalogPage;
+    ConstructorPage constructorPage;
 
     @BeforeMethod
     public void setup() {
@@ -33,6 +38,11 @@ public class BaseTest {
 
         loginPage = new LoginPage();
         catalogPage = new CatalogPage();
+        constructorPage = new ConstructorPage();
+
+        loginPage
+                .openPage()
+                .login(user, password);
     }
 
     @AfterMethod
