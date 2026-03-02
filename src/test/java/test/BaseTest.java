@@ -19,7 +19,6 @@ public class BaseTest {
     String user = USER;
     String password = PASSWORD;
 
-
     LoginPage loginPage;
     CatalogPage catalogPage;
     ConstructorPage constructorPage;
