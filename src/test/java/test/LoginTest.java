@@ -25,9 +25,9 @@ public class LoginTest extends BaseTest {
                     .pageOpen()
                     .checkTextColor();
         } else if (currentUrl.equals(authorPage)) {
-            constructorPage
+            constructorMyCoursesPage
                     .pageOpen()
-                    .checkBtnColor();
+                    .checkNewCourseAuthorBtnColor();
         }
     }
 }
